@@ -1,2 +1,2 @@
-# capstone-project-springboot-mymovieplan-frontend
-capstone-project-springboot-mymovieplan-frontend
+# capstone-project-angular-mymovieplan-frontend
+capstone-project-angular-mymovieplan-frontend
