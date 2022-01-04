@@ -1,0 +1,17 @@
+<div class = "container-fluid">
+    <app-admin-navbar></app-admin-navbar>
+</div>
+
+<div class = "container-fluid">
+    <h3>Confirm Removing The Movie Ticket</h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class = "form-group">
+            <label>Movie Ticket Id</label>
+            <input type = "number" class = "form-control" id = "movieTicketId"
+                [(ngModel)] = "MovieTicket.id" name = "movieTicketId">
+        </div>
+        <p></p>
+
+        <button class = "btn btn-success" type = "submit">Confirm Removing The Movie Ticket</button>
+    </form>
+</div>

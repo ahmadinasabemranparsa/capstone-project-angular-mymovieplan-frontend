@@ -1,0 +1,29 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { User } from '../class/user';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+
+  constructor(private httpClient: HttpClient) { }
+
+  private baseURL = "http://localhost:8080/api/v1/user";
+
+  addUser(user: User) {
+    return this.httpClient.post(`${this.baseURL}/users/add`, user);
+  }
+  
+  getAllUsers() {
+    return this.httpClient.get(`${this.baseURL}/users/all`);
+  }
+
+  getUserById(id: number) {
+    return this.httpClient.get(`${this.baseURL}/users/getParticularUser/${id}`);
+  }
+
+  getUserDetails(id: number, firstName: string, lastName: string, username: string, password: string) {
+    return this.httpClient.get(`${this.baseURL}/getAParticularUser/details`);
+  }
+}
