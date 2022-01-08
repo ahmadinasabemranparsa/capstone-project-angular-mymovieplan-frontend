@@ -8,7 +8,7 @@ export class MovieTicketService {
 
   constructor(private httpClient: HttpClient) { }
 
-  private baseURL = "http://localhost:8080/api/v1/movieTicket";
+  private baseURL = "http://3.138.54.181:8080/api/v1/movieTicket";
 
   getAllMovieTickets() {
     return this.httpClient.get(`${this.baseURL}/movieTickets/all`);
