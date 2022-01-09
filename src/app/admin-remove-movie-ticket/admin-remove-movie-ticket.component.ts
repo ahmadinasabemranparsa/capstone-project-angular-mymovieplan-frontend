@@ -11,17 +11,18 @@ import { MovieTicketService } from '../movie-ticket.service';
 export class AdminRemoveMovieTicketComponent implements OnInit {
 
   public removeMovieTicket: FormGroup;
+  public movieTicketId: any;
 
   constructor(private formBuilder: FormBuilder, private movieTicketService: MovieTicketService, private router: Router) {
     this.removeMovieTicket = this.formBuilder.group({
-      movieTicketId: ['']
+      movieTicketId: []
     });
   }
 
   ngOnInit(): void {
   }
 
-  onSubmit(movieTicket: FormGroup) {
+  onSubmit(movieTicketId: any) {
     this.movieTicketService.deleteMovieTicket(this.removeMovieTicket.value).subscribe(data => {
       console.log(data);
     });

@@ -18,7 +18,7 @@ export class UserService {
     return this.httpClient.get(`${this.baseURL}/users/all`);
   }
 
-  getUserById(id: number) {
+  getUserById(id: any) {
     return this.httpClient.get(`${this.baseURL}/users/getParticularUser/${id}`);
   }
 

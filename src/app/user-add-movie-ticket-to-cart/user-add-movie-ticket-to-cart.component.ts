@@ -16,14 +16,19 @@ export class UserAddMovieTicketToCartComponent implements OnInit {
               private cartService: CartService,
               private router: Router) {
                 this.addMovieTicketToCart = this.formBuilder.group({
-                  movieTicketId: ['']
+                  movieTicketId: [],
+                  movieName: [''],
+                  showDate: [''],
+                  showTime: [''],
+                  showingLocation: [''],
+                  price: []
                 });
               }
 
   ngOnInit(): void {
   }
 
-  onSubmit(movieTicketIdNumber: FormGroup) {
+  onSubmit(movieTicketDetails: FormGroup) {
     this.cartService.addMovieTicketToCart(this.addMovieTicketToCart.value).subscribe(data => {
       console.log(data);
     });

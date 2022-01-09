@@ -14,7 +14,7 @@ export class MovieTicketService {
     return this.httpClient.get(`${this.baseURL}/movieTickets/all`);
   }
 
-  getMovieTicketByMovieName(movieName: string) {
+  getMovieTicketByMovieName(movieName: any) {
     return this.httpClient.get(`${this.baseURL}/getAParticularMovie/${movieName}`);
   }
 
@@ -26,7 +26,7 @@ export class MovieTicketService {
     return this.httpClient.put(`${this.baseURL}/movieTickets/update`, movieTicket);
   }
 
-  deleteMovieTicket(id: number) {
-    return this.httpClient.delete(`${this.baseURL}/movieTickets/delete/${id}`);
+  deleteMovieTicket(movieTicket: any) {
+    return this.httpClient.delete(`${this.baseURL}/movieTickets/delete/${movieTicket}`);
   }
 }

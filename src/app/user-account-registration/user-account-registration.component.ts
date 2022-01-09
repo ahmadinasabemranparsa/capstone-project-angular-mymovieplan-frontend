@@ -16,7 +16,6 @@ export class UserAccountRegistrationComponent implements OnInit {
               private userService: UserService,
               private router: Router) {
                 this.userAccountRegistration = this.formBuilder.group({
-                  userId: [''],
                   firstName: [''],
                   lastName: [''],
                   username: [''],

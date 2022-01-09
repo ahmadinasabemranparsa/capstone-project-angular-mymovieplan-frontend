@@ -14,12 +14,11 @@ export class AdminAddMovieTicketComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private movieTicketService: MovieTicketService, private router: Router) {
     this.addMovieTicket = this.formBuilder.group({
-      movieTicketId: [''],
       movieName: [''],
       showDate: [''],
       showTime: [''],
       showingLocation: [''],
-      price: ['']
+      price: []
     });
   }
 

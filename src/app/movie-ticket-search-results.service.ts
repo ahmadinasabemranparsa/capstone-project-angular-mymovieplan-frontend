@@ -14,7 +14,7 @@ export class MovieTicketSearchResultsService {
     return this.httpClient.get(`${this.baseURL}/movieTicket/search/results/all`);
   }
 
-  createMovieTicketSearchResult(movieName: string) {
+  createMovieTicketSearchResult(movieName: any) {
     return this.httpClient.post(`${this.baseURL}/movieTicket/search/results/add`, movieName);
   }
 

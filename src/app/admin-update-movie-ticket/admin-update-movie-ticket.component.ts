@@ -14,12 +14,12 @@ export class AdminUpdateMovieTicketComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private movieTicketService: MovieTicketService, private router: Router) {
     this.updateMovieTicketDetails = this.formBuilder.group({
-      movieTicketId: [''],
+      movieTicketId: [],
       movieName: [''],
       showDate: [''],
       showTime: [''],
       showingLocation: [''],
-      price: ['']
+      price: []
     });
   }
 
