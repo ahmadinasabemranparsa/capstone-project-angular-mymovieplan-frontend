@@ -24,8 +24,9 @@ export class UserRemoveMovieTicketFromCartComponent implements OnInit {
   }
 
   onSubmit(removeMovieTicketFromCartId: FormGroup) {
-    this.cartService.addMovieTicketToCart(this.removeMovieTicketFromCart.value).subscribe(data => {
+    this.cartService.addMovieTicketToCart(this.removeMovieTicketFromCart.getRawValue()).subscribe(data => {
       console.log(data);
+      console.log(this.removeMovieTicketFromCart.getRawValue());
     });
     this.router.navigate(['/user-cart']);
   }
