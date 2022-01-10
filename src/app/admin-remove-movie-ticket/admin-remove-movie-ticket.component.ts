@@ -23,9 +23,9 @@ export class AdminRemoveMovieTicketComponent implements OnInit {
   }
 
   onSubmit(movieTicketId: any) {
-    this.movieTicketService.deleteMovieTicket(this.removeMovieTicket.getRawValue()).subscribe(data => {
+    console.log(this.removeMovieTicket.value.movieTicketId);
+    this.movieTicketService.deleteMovieTicket(this.removeMovieTicket.value.movieTicketId).subscribe(data => {
       console.log(data);
-      console.log(this.removeMovieTicket.getRawValue());
     });
     this.router.navigate(['/admin-dashboard']);
   }

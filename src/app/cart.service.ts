@@ -18,8 +18,8 @@ export class CartService {
     return this.httpClient.post(`${this.baseURL}/movieTickets/add`, movieTicket);
   }
 
-  deleteMovieTicketFromCart(movieTicket: any) {
-    return this.httpClient.delete(`${this.baseURL}/movieTickets/delete/${movieTicket}`);
+  deleteMovieTicketFromCart(id: any) {
+    return this.httpClient.delete(`${this.baseURL}/movieTickets/delete/${id}`);
   }
 
   deleteAllMovieTicketsFromCart() {

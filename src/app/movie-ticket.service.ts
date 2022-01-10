@@ -26,7 +26,7 @@ export class MovieTicketService {
     return this.httpClient.put(`${this.baseURL}/movieTickets/update`, movieTicket);
   }
 
-  deleteMovieTicket(movieTicket: any) {
-    return this.httpClient.delete(`${this.baseURL}/movieTickets/delete/${movieTicket}`);
+  deleteMovieTicket(id: any) {
+    return this.httpClient.delete(`${this.baseURL}/movieTickets/delete/${id}`);
   }
 }

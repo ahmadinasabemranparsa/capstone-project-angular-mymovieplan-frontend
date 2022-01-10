@@ -16,7 +16,7 @@ export class UserRemoveMovieTicketFromCartComponent implements OnInit {
               private cartService: CartService,
               private router: Router) {
                 this.removeMovieTicketFromCart = this.formBuilder.group({
-                  movieTicketId: ['']
+                  movieTicketId: []
                 });
               }
 
@@ -24,10 +24,11 @@ export class UserRemoveMovieTicketFromCartComponent implements OnInit {
   }
 
   onSubmit(removeMovieTicketFromCartId: FormGroup) {
-    this.cartService.addMovieTicketToCart(this.removeMovieTicketFromCart.getRawValue()).subscribe(data => {
+    console.log(this.removeMovieTicketFromCart.value.movieTicketId);
+    this.cartService.addMovieTicketToCart(this.removeMovieTicketFromCart.value.movieTicketId).subscribe(data => {
       console.log(data);
-      console.log(this.removeMovieTicketFromCart.getRawValue());
     });
+
     this.router.navigate(['/user-cart']);
   }
 }

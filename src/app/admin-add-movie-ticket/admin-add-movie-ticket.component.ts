@@ -29,6 +29,6 @@ export class AdminAddMovieTicketComponent implements OnInit {
     this.movieTicketService.addMovieTicket(this.addMovieTicket.value).subscribe(data => {
       console.log(data);
     });
-    this.router.navigate(['/admin-dashboard']);
+    this.router.navigate(['/admin-account-login']);
   }
 }

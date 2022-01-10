@@ -16,12 +16,7 @@ export class UserAddMovieTicketToCartComponent implements OnInit {
               private cartService: CartService,
               private router: Router) {
                 this.addMovieTicketToCart = this.formBuilder.group({
-                  movieTicketId: [],
-                  movieName: [''],
-                  showDate: [''],
-                  showTime: [''],
-                  showingLocation: [''],
-                  price: []
+                  movieTicketId: []
                 });
               }
 
@@ -29,9 +24,10 @@ export class UserAddMovieTicketToCartComponent implements OnInit {
   }
 
   onSubmit(movieTicketDetails: FormGroup) {
-    this.cartService.addMovieTicketToCart(this.addMovieTicketToCart.value).subscribe(data => {
+    console.log(this.addMovieTicketToCart.value.movieTicketId);
+    this.cartService.addMovieTicketToCart(this.addMovieTicketToCart.value.movieTicketId).subscribe(data => {
       console.log(data);
     });
-    this.router.navigate(['/movie-ticket-search-results']);
+    this.router.navigate(['/movie-ticket-search']);
   }
 }

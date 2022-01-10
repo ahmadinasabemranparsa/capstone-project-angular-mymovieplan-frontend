@@ -24,7 +24,8 @@ export class MovieTicketSearchComponent implements OnInit {
   }
 
   onSubmit(movieTicketSearchKeyword: FormGroup) {
-    this.movieTicketSearchResultsService.createMovieTicketSearchResult(this.movieTicketSearch.value).subscribe(data => {
+    console.log(this.movieTicketSearch.value.movieName);
+    this.movieTicketSearchResultsService.createMovieTicketSearchResult(this.movieTicketSearch.value.movieName).subscribe(data => {
       console.log(data);
     });
     this.router.navigate(['/movie-ticket-search-results']);
