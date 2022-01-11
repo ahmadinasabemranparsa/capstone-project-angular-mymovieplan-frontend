@@ -15,6 +15,7 @@ import { UserAccountRegistrationComponent } from './user-account-registration/us
 import { UserAddMovieTicketToCartComponent } from './user-add-movie-ticket-to-cart/user-add-movie-ticket-to-cart.component';
 import { UserCartComponent } from './user-cart/user-cart.component';
 import { UserCheckoutComponent } from './user-checkout/user-checkout.component';
+import { UserListOfAllMoviesComponent } from './user-list-of-all-movies/user-list-of-all-movies.component';
 import { UserMakePaymentComponent } from './user-make-payment/user-make-payment.component';
 import { UserMovieTicketOrderSummaryComponent } from './user-movie-ticket-order-summary/user-movie-ticket-order-summary.component';
 import { UserPortalComponent } from './user-portal/user-portal.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'admin-account-login', component: AdminAccountLoginComponent},
+  {path: 'user-list-of-all-movies', component: UserListOfAllMoviesComponent},
   {path: 'admin-add-movie-ticket', component: AdminAddMovieTicketComponent},
   {path: 'admin-dashboard', component: AdminDashboardComponent},
   {path: 'admin-portal', component: AdminPortalComponent},

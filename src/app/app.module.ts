@@ -25,6 +25,7 @@ import { UserMakePaymentComponent } from './user-make-payment/user-make-payment.
 import { UserMovieTicketOrderSummaryComponent } from './user-movie-ticket-order-summary/user-movie-ticket-order-summary.component';
 import { UserPortalComponent } from './user-portal/user-portal.component';
 import { UserRemoveMovieTicketFromCartComponent } from './user-remove-movie-ticket-from-cart/user-remove-movie-ticket-from-cart.component';
+import { UserListOfAllMoviesComponent } from './user-list-of-all-movies/user-list-of-all-movies.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { UserRemoveMovieTicketFromCartComponent } from './user-remove-movie-tick
     UserMakePaymentComponent,
     UserMovieTicketOrderSummaryComponent,
     UserPortalComponent,
-    UserRemoveMovieTicketFromCartComponent
+    UserRemoveMovieTicketFromCartComponent,
+    UserListOfAllMoviesComponent
   ],
   imports: [
     BrowserModule,

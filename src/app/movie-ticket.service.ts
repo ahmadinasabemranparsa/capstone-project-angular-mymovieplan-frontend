@@ -18,6 +18,10 @@ export class MovieTicketService {
     return this.httpClient.get(`${this.baseURL}/getAParticularMovie/${movieName}`);
   }
 
+  getMovieTicketById(id: any) {
+    return this.httpClient.get(`${this.baseURL}/getAParticularMovie/${id}`);
+  }
+
   addMovieTicket(movieTicket: any) {
     return this.httpClient.post(`${this.baseURL}/movieTickets/add`, movieTicket);
   }

@@ -26,4 +26,8 @@ export class UserAccountDashboardComponent implements OnInit {
       this.userDetails = data;
     });
   }
+
+  goToListOfAllMovieTickets() {
+    this.router.navigate(['/user-list-of-all-movies']);
+  }
 }

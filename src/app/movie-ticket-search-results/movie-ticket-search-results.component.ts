@@ -13,6 +13,9 @@ export class MovieTicketSearchResultsComponent implements OnInit {
   public movieTickets: any;
   public movieTicket: any;
 
+  public myObj: any;
+
+
   constructor(private movieTicketService: MovieTicketService,
               private movieTicketSearchResultsService: MovieTicketSearchResultsService,
               private router: Router) { }
@@ -30,8 +33,9 @@ export class MovieTicketSearchResultsComponent implements OnInit {
   }
 
   getMovieTickets() {
-    this.movieTicketService.getMovieTicketByMovieName(this.movieTicket).subscribe(data => {
+    this.movieTicketService.getMovieTicketByMovieName(this.movieTicket.movieTicketId).subscribe(data => {
       this.movieTickets = data;
+      console.log(this.movieTickets);
     });
   }
 
