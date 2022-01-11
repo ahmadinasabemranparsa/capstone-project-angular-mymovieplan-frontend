@@ -8,7 +8,7 @@ export class CartService {
 
   constructor(private httpClient: HttpClient) { }
 
-  private baseURL = "http://3.138.54.181:8080/api/v1/cart";
+  private baseURL = "http://52.206.141.98:8080/api/v1/cart";
 
   getAllMovieTicketsInCart() {
     return this.httpClient.get(`${this.baseURL}/movieTickets/all`);
